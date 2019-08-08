@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  //Set the initial variables
   text = "Sleep";
   buttonText = "Done";
 
-  changeText(): void{
+  //Change the text and button text depending on current button text
+  update(): void{
     switch(this.buttonText){
       case "Done":{
         this.buttonText = "Party";
