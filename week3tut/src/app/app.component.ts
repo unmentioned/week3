@@ -7,25 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   //Set the initial variables
-  text = "Sleep";
+  title = "Sleep";
   buttonText = "Done";
 
   //Change the text and button text depending on current button text
   update(): void{
-    switch(this.buttonText){
-      case "Done":{
-        this.buttonText = "Party";
-        this.text = "Study";
+    switch(this.title){
+      case "Sleep":{
+        this.title = "Study";
+        break;
+      }
+      case "Study":{
+        this.title = "Party";
         break;
       }
       case "Party":{
-        this.buttonText = "Sleep";
-        this.text = "Party";
-        break;
-      }
-      case "Sleep":{
-        this.buttonText = "Done";
-        this.text = "Sleep";
+        this.title = "Sleep";
         break;
       }
     }
